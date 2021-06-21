@@ -58,6 +58,10 @@ class DBStorage:
         """Saves session changes to database"""
         self.__session.commit()
 
+    def close(self):
+        """Calls remove method on __session"""
+        self.__session.remove()
+
     def delete(self, obj=None):
         """Deletes obj from session if it exists"""
         if obj:
