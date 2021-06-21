@@ -18,8 +18,9 @@ def teardown(exception=None):
 @app.route('/states_list', strict_slashes=False)
 def states_list():
     """returns a dynamic web page for '/states_list' route"""
-    return render_template('7-states_list.html', states=sorted(storage.all
-                           (State).values(), key=operator.attrgetter('name')))
+    states = sorted(storage.all(State).values(), key=operator.attrgetter
+                    ('name'))
+    return render_template('7-states_list.html', states=states)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
