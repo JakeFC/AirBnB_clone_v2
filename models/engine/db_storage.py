@@ -60,8 +60,7 @@ class DBStorage:
 
     def close(self):
         """Calls remove method on __session"""
-        self.__session.remove()
-        self.reload()
+        self.__session.close()
 
     def delete(self, obj=None):
         """Deletes obj from session if it exists"""
