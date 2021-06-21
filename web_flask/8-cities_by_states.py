@@ -20,12 +20,8 @@ def cities_by_states():
     """returns a dynamic web page for '/cities_by_states' route"""
     states = sorted(storage.all(State).values(), key=operator.attrgetter
                     ('name'))
-    if storage.__class__.__name__ = 'FileStorage':
-        cities = state.cities()
-    else:
-        cities = state.cities
     return render_template('8-cities_by_states.html', states=states,
-                           cities=cities)
+                           storage=storage.__class__.__name__)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

@@ -9,7 +9,9 @@
             {% for state in states %}
                 <LI>{{ state.id }}: <B>{{ state.name }}</B>
                     <UL>
-                        {% for city in cities}
+                        {% cities=state.cities() if storage is 'FileStorage' %}
+                        {% else cities=state.cities %}
+                        {% for city in cities %}
                         <LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
                         {% endfor %}
                     </UL>
