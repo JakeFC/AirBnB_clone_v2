@@ -4,9 +4,9 @@
         <TITLE>HBNB</TITLE>
     </HEAD>
     <BODY>
-        {% if states or state %}<H1>State{% if state %}: {{ state.name }}{% else %}s{% endif %}</H1>
+        {% if states is not None or state %}<H1>State{% if state %}: {{ state.name }}{% else %}s{% endif %}</H1>
         {% if state %}<H3>Cities:</H3>
-        {% endif %}{% if states or state %}{% if states %}<UL>
+        {% endif %}{% if states is not None or state %}{% if states is not None %}<UL>
             {% for state in states.values()| sort(attribute='name') %}
                 <LI>{{ state.id }}: <B>{{ state.name }}</B></LI>
         
