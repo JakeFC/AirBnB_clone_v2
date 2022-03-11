@@ -1,6 +1,6 @@
 <center> <h1>HBNB - MySQL</h1> </center>
 
-This repository contains the second stage of a student project to build a clone of the AirBnB website. The original can be found [here](https://github.com/justinmajetich/AirBnB_clone/blob/dev/AUTHORS). This stage implements a backend interface using a sql database to manage program data through a console. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using either communication with a sql database or a system of JSON serialization/deserialization, storage is persistent between sessions.
+This repository contains the second stage of a student project to build a clone of the AirBnB website. The original can be found [here](https://github.com/justinmajetich/AirBnB_clone/blob/dev). This stage implements a backend interface using a sql database to manage program data through a console. Console commands allow the user to create, update, and destroy objects, as well as manage file storage. Using either communication with a sql database or a system of JSON serialization/deserialization, storage is persistent between sessions.
 
 ---
 
